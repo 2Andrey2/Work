@@ -1,0 +1,9 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="GeneralNumbering.MainWindow"
+        Title="GeneralNumbering">
+	<Button x:Name ="Further" Content="Выбрать файл" Margin="15,10,0,0" Height="40" FontSize="20" FontFamily="Times New Roman" FontWeight="Bold" Width="155" VerticalAlignment="Top" Click="Clik_Open_File"/>
+</Window>
