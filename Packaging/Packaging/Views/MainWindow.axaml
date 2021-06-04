@@ -1,0 +1,37 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Packaging.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Packaging.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Packaging">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="1*"/>
+			<RowDefinition Height="1*"/>
+			<RowDefinition Height="1*"/>
+			<RowDefinition Height="1*"/>
+			<RowDefinition Height="1*"/>
+		</Grid.RowDefinitions>
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1*"/>
+			<ColumnDefinition Width="1*"/>
+			<ColumnDefinition Width="1*"/>
+		</Grid.ColumnDefinitions>
+        <Button Content="Выбрать файл" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OpenFile}"/>
+		<TextBox Text="{Binding CountColum}" Grid.Row="0" Grid.Column="1" HorizontalContentAlignment="Center"/>
+		<TextBox Text="{Binding CountLine}" Grid.Row="0" Grid.Column="2" HorizontalContentAlignment="Left"/>
+		<TextBox Text="{Binding Path}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Left"/>
+		<Button Content="Обработать" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding WorkFileB}"/>
+    </Grid>
+
+
+</Window>
