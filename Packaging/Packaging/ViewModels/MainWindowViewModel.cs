@@ -21,12 +21,22 @@ namespace Packaging.ViewModels
                 Path = result[0];
             }
         }
-        public async Task WorkFileB()
+        public async Task OpenFileRez()
         {
-            WorkFile work = new WorkFile(_CountColum, _CountLine, _Path);
-
+            var dialog = new OpenFolderDialog();
+            string result = null;
+            result = await dialog.ShowAsync(new Window());
+            if (result != null)
+            {
+                PathRez = result;
+            }
         }
-        private int _CountColum = 0;
+        public void WorkFileB()
+        {
+            WorkFile work = new WorkFile(_CountColum, _CountLine, _Path, _PathRez);
+            work.BildFile();
+        }
+        private int _CountColum = 2;
         public int CountColum
         {
             get => _CountColum;
@@ -35,7 +45,7 @@ namespace Packaging.ViewModels
                 this.RaiseAndSetIfChanged(ref _CountColum, value);
             }
         }
-        private int _CountLine = 0;
+        private int _CountLine = 20;
         public int CountLine
         {
             get => _CountLine;
@@ -44,7 +54,17 @@ namespace Packaging.ViewModels
                 this.RaiseAndSetIfChanged(ref _CountLine, value);
             }
         }
-        private string _Path = "”казаный путь";
+        private string _PathRez = @"C:\Users\Andrey\Desktop";
+        public string PathRez
+        {
+            get => _PathRez;
+            set
+            {
+                this.RaiseAndSetIfChanged(ref _PathRez, value);
+            }
+        }
+
+        private string _Path = @"C:\Users\Andrey\Desktop\work\rez\2021_5_30_15_28_Product1(0)_info.txt";
         public string Path
         {
             get => _Path;

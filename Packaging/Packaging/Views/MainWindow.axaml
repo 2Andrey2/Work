@@ -24,13 +24,14 @@
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="1*"/>
 			<ColumnDefinition Width="1*"/>
-			<ColumnDefinition Width="1*"/>
 		</Grid.ColumnDefinitions>
         <Button Content="Выбрать файл" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OpenFile}"/>
-		<TextBox Text="{Binding CountColum}" Grid.Row="0" Grid.Column="1" HorizontalContentAlignment="Center"/>
-		<TextBox Text="{Binding CountLine}" Grid.Row="0" Grid.Column="2" HorizontalContentAlignment="Left"/>
+		<Button Content="Путь к результату" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OpenFileRez}"/>
+		<TextBox Text="{Binding CountColum}" Grid.Row="2" Grid.Column="0" HorizontalContentAlignment="Center"/>
+		<TextBox Text="{Binding CountLine}" Grid.Row="2" Grid.Column="1" HorizontalContentAlignment="Left"/>
 		<TextBox Text="{Binding Path}" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Left"/>
-		<Button Content="Обработать" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding WorkFileB}"/>
+		<TextBox Text="{Binding PathRez}" Grid.Row="1" Grid.Column="1" HorizontalContentAlignment="Left"/>
+		<Button Content="Обработать" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding WorkFileB}"/>
     </Grid>
 
 
